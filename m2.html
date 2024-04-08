@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FitHeal</title>
+<link rel="stylesheet" href="public\styles.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">  
+<link rel="icon" type="image/x-icon" href="assets\Untitled design.svg">
+<style>
+    img{
+      width:5%;
+  }
+  .top{
+    background-color:#646a8e;
+  }
+ 
+
+  .buttons{
+  flex-direction: row;
+  justify-content: flex-end;
+  
+  }
+  
+  .button{
+      margin-left: 1200px;
+      font-family: lato,sans-serif;
+      border-radius: 15px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #646a8e;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+ margin-bottom: 50px;
+ margin-top:70px;
+ margin-right: 50px;
+  
+}
+.button:hover {
+  background-color: #222538;
+  
+}
+  
+  a {
+    text-decoration: none;
+    font-family: sans-serif;
+    text-transform: lowercase;
+    font-size: 1.5em;
+    color: #222;
+  }
+  .toggle-switch {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Change to flex-start to move the toggle button to the left */
+    margin-top: 40px; /* Add margin-bottom to create space between the toggle button and radio buttons */
+    margin-left:1130px;
+    position: relative;
+    
+    width: 70px; /* Updated width */
+    height: 25px; /* Updated height */
+  }
+   .toggle-switch input {
+    display: none;
+   }
+   .toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 24px; /* Updated border-radius */
+    transition: .4s;
+  }
+  
+      .toggle-switch {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Change to center to align the toggle button in the center */
+        margin-bottom: 20px; /* Add margin-bottom to create space between the toggle button and radio buttons */
+        position: relative;
+        width: 75px; /* Updated width */
+        height: 30px;
+        left:150px /* Updated height */
+      }
+  
+  .toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 25px; /* Updated height */
+    width: 25px; /* Updated width */
+    left: 3px; /* Updated left position */
+    bottom: 3px; /* Updated bottom position */
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+  }
+  input:checked + .toggle-slider {
+    background-color: #646a8e;
+  }
+ 
+  input:checked + .toggle-slider:before {
+    transform: translateX(46px);
+  }
+  
+  .gender-label {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    
+  }
+
+  input:not(:checked) ~ .male-label {
+    display: block;
+    left: 5px;
+  }
+  
+  input:checked ~ .female-label {
+    display: block;
+    right: 5px;
+  }
+ 
+  
+</style>
+</head>
+<body>
+        <div class="top">
+        <img src="assets\logo.svg" alt="FitHeal text"> 
+        <a href="home.html" class="icon">
+            <img src="assets\home.svg" alt="Home">
+        </a>
+        <a href="login.html" class="icon">
+            <img src="assets\login.svg" alt="Person" >
+        </a>
+    </div>
+   <div class="mid">
+    <a href="bmi.html"><img src="assets\muscle-m\Vector 49.svg" alt="Muscle 1"></a>
+        <label class="toggle-switch">
+          <input type="checkbox" id="genderToggle">
+          <span class="toggle-slider"></span>
+          <span class="gender-label male-label">Male</span>
+          <span class="gender-label female-label">Female</span>
+        </label>
+        <div class="buttons">
+  
+    <button class="button"onclick="redirectToPage('diet_home.html')">DIET GENERATOR</button>
+    <button class="button" onclick="redirectToPage('bmi.html')">BMI CALCULATOR</button>
+   
+
+    </div>
+   
+</div>
+
+<script>
+   
+    function redirectToPage(pageURL) {
+        window.location.href = pageURL;
+    }
+
+  
+</script>
+<script>
+    
+const genderToggle = document.getElementById('genderToggle');
+genderToggle.addEventListener('change', function() {
+  if (this.checked) {
+    console.log('Female selected');
+   
+  } else {
+    console.log('Male selected');
+   
+  }
+});
+
+</script>
+</body>
+</html>
+         
+              

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitHeal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+  <link rel="icon" type="image/x-icon" href="assets\Untitled design.svg">
+  <style>
+    img {
+      width:5%;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .boxes {
+      overflow: scroll;
+      display: flex;
+      flex-direction: column;
+      width: stretch;
+      scroll-behavior: smooth;
+      /* Add smooth scrolling behavior */
+    }
+
+    .top {
+      background-color: #646a8e;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      overflow: scroll;
+      scroll-behavior: smooth;
+      /* Add smooth scrolling behavior */
+    }
+
+    .radio-buttons label {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .box {
+      margin-top: 20px;
+      margin-right: 50px;
+      font-size: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 400px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      border-radius: 25px;
+    }
+
+    .box1 {
+      margin-bottom: 20px;
+      margin-top: 20px;
+      margin-left: 30px;
+      padding: 20px;
+      margin-right: 100px;
+      background-size: cover;
+      font-size: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: auto;
+      width: 800px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      border-radius: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      padding: 20px;
+      font-family: 'Montserrat', sans-serif;
+      animation: stackDown 0.5s forwards; /* Add animation for stacking effect */
+    }
+
+   
+    
+
+    .box1-header {
+      background: #646a8e;
+      padding-left: 0%;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 30px;
+      border-radius: 15px;
+      border-color: #222538;
+      color: white;
+    }
+
+    .box-header {
+      padding-top: 10%;
+      text-align: left;
+      font-weight: bold;
+      font-size: 30px;
+      border-radius: 15px;
+      border-color: #222538;
+    }
+
+    .boxes {
+      display: block;
+    }
+
+    .radio-buttons {
+      width: 40%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 25px;
+    }
+
+    .radio-buttons input[type="radio"] {
+      margin-bottom: 20px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .toggle-switch {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 30px;
+      position: relative;
+      width: 70px;
+      height: 25px;
+    }
+
+    .toggle-switch input {
+      display: none;
+    }
+
+    .toggle-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      border-radius: 24px;
+      transition: .4s;
+    }
+
+    .toggle-switch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      position: relative;
+      width: 75px;
+      height: 30px;
+      left: 150px
+    }
+
+    .toggle-slider:before {
+      position: absolute;
+      content: "";
+      height: 25px;
+      width: 25px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      border-radius: 50%;
+      transition: .4s;
+    }
+
+    input:checked+.toggle-slider {
+      background-color: #646a8e;
+    }
+
+    input:checked+.toggle-slider:before {
+      transform: translateX(46px);
+    }
+
+    .activity-label {
+      display: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+    }
+
+    input:not(:checked)~.work-label {
+      display: block;
+      left: 5px;
+    }
+
+    input:checked~.relief-label {
+      display: block;
+      right: 5px;
+    }
+
+    video {
+      border-radius: 25px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top">
+    <img src="assets\logo.svg" alt="FitHeal text">
+    <a href="home.html" class="icon">
+      <img src="assets\home.svg" alt="Home">
+    </a>
+  </div>
+  <div class="container">
+    <div class="boxes" id="divisions">
+      <div class="box1">
+        <div class="box1-header">
+          <p> Barbell Silverback Shrug</p>
+        </div>
+        <video width="640" height="320" controls>
+          <source src="assets\shoulder1.mp4" type="video/mp4">
+        </video>
+        <p> 1.Stand with your feet shoulder width apart holding the Barbell with both hands in front just past shoulder
+          width.<br><br>2.Bend forward at the hips with a slight bend in your knees, keeping your back
+          straight.<br><br>3.Engage your shoulder blades, as if you are trying to touch them together.<br><br>4.Release
+          the shrug.</p>
+      </div>
+      <div class="box1">
+        <div class="box1-header">
+          <p> Dumbbell Seated Shrug</p>
+        </div>
+        <video width="640" height="320" controls>
+          <source src="assets\shoulder2.mp4" type="video/mp4">
+        </video>
+        <p>1.Stand with your feet shoulder width apart holding dumbbells with both hands in front just past shoulder width.<br><br>2.Bend forward at the hips with a slight bend in your knees, keeping your back straight.<br><br>Engage your shoulder blades, as if you are trying to touch them together.</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <label class="toggle-switch">
+          <input type="checkbox" id="genderToggle">
+          <span class="toggle-slider"></span>
+          <span class="activity-label work-label">Workout</span>
+          <span class="activity-label relief-label">Relief</span>
+        </label>
+      </div>
+      <div style="display: flex; justify-content: center;">
+        <div class="radio-buttons">
+          <input type="radio" name="option1"> Dumbbell<br>
+          <input type="radio" name="option1"> Machine<br>
+          <input type="radio" name="option1"> Kettlebells<br>
+          <input type="radio" name="option1"> Cables<br>
+          <input type="radio" name="option1"> Plate<br>
+          <input type="radio" name="option1"> Yoga<br>
+          <input type="radio" name="option1"> Vitruvian<br>
+          <input type="radio" name="option1"> Smith Machine<br>
+        </div>
+        <div class="radio-buttons">
+          <input type="radio" name="option2"> Barbell<br>
+          <input type="radio" name="option2"> Medicine Ball<br>
+          <input type="radio" name="option2"> Stretches<br>
+          <input type="radio" name="option2"> Band<br>
+          <input type="radio" name="option2"> TRX<br>
+          <input type="radio" name="option2"> Bosu Ball<br>
+          <input type="radio" name="option2"> Cardio<br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FitHeal</title>
+    <link rel="stylesheet" href="public\styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="assets\Untitled design.svg" />
+  </head>
+  <body>
+    <div class="top">
+      <img src="assets\logo.svg" alt="FitHeal text" />
+      <a href="home.html" class="icon">
+        <img src="assets\home.svg" alt="Home" />
+      </a>
+      <a href="login.html" class="icon">
+        <img src="assets\login.svg" alt="Person" />
+      </a>
+    </div>
+    <div class="container">
+      <div
+        style="display: flex; gap: 40px;"
+        class="svgCSS"
+      >
+        <object
+          data="assets\body.svg"
+          type="image/svg+xml"
+          class="svgCSS"
+          id="mySvg"
+        ></object>
+        <object
+          data="assets\body2.svg"
+          type="image/svg+xml"
+          class="svgCSS"
+          id="mySvg2"
+        ></object>
+      </div>
+      <div class="buttons">
+          <label class="toggle-switch">
+            <input type="checkbox" id="genderToggle" />
+            <span class="toggle-slider"></span>
+            <span class="gender-label male-label">Male</span>
+            <span class="gender-label female-label">Female</span>
+          </label>
+        <button class="button" onclick="redirectToPage('diet_home.html')">
+          DIET GENERATOR
+        </button>
+        <button class="button" onclick="redirectToPage('bmi.html')">
+          BMI CALCULATOR
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function redirectToPage(pageURL) {
+        window.location.href = pageURL;
+      }
+    </script>
+    <script>
+      const genderToggle = document.getElementById("genderToggle");
+      genderToggle.addEventListener("change", function () {
+        if (this.checked) {
+          console.log("Female selected");
+        } else {
+          console.log("Male selected");
+        }
+      });
+    </script>
+  </body>
+  <script src="/script.js" type="module"></script>
+  <script src="/script2.js" type="module"></script>
+</html>

@@ -1,0 +1,121 @@
+img {
+  width: 5%;
+}
+.top {
+  background-color: #646a8e;
+  top: 0px;
+  left: 0px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.container{
+  display: flex;
+}
+.button {
+  font-family: lato, sans-serif;
+  border-radius: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #646a8e;
+  height: fit-content;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  padding: 20px;
+}
+
+.button:hover {
+  background-color: #222538;
+}
+
+a {
+  text-decoration: none;
+  font-family: sans-serif;
+  text-transform: lowercase;
+  font-size: 1.5em;
+  color: #222;
+}
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Change to flex-start to move the toggle button to the left */
+  margin-top: 40px; /* Add margin-bottom to create space between the toggle button and radio buttons */
+
+  width: 70px; /* Updated width */
+  height: 25px; /* Updated height */
+}
+.toggle-switch input {
+  display: none;
+}
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 24px; /* Updated border-radius */
+  transition: 0.4s;
+}
+
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Change to center to align the toggle button in the center */
+  margin-bottom: 20px; /* Add margin-bottom to create space between the toggle button and radio buttons */
+  position: relative;
+  width: 75px; /* Updated width */
+  height: 30px;
+  left: 150px; /* Updated height */
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 25px; /* Updated height */
+  width: 25px; /* Updated width */
+  left: 3px; /* Updated left position */
+  bottom: 3px; /* Updated bottom position */
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+input:checked + .toggle-slider {
+  background-color: #646a8e;
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(46px);
+}
+
+.gender-label {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+input:not(:checked) ~ .male-label {
+  display: block;
+  left: 5px;
+}
+
+input:checked ~ .female-label {
+  display: block;
+  right: 5px;
+}
+* {
+  margin: 0px;
+}
+.svgCSS{
+  width: 80%;
+  height: 80%;
+}
